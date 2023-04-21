@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Code in les", "Code in les\Code in les.vcxproj", "{CB6A7D49-A1A6-4ACE-BB19-9A7FF1979066}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Vragen 5.12", "Vragen 5.12\Vragen 5.12.vcxproj", "{364EB00E-6DCB-4614-A13F-C67DEAB60C22}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Opdracht_5.13.1", "Opdracht_5.13.1\Opdracht_5.13.1.vcxproj", "{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +25,22 @@ Global
 		{CB6A7D49-A1A6-4ACE-BB19-9A7FF1979066}.Release|x64.Build.0 = Release|x64
 		{CB6A7D49-A1A6-4ACE-BB19-9A7FF1979066}.Release|x86.ActiveCfg = Release|Win32
 		{CB6A7D49-A1A6-4ACE-BB19-9A7FF1979066}.Release|x86.Build.0 = Release|Win32
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Debug|x64.ActiveCfg = Debug|x64
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Debug|x64.Build.0 = Debug|x64
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Debug|x86.ActiveCfg = Debug|Win32
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Debug|x86.Build.0 = Debug|Win32
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Release|x64.ActiveCfg = Release|x64
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Release|x64.Build.0 = Release|x64
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Release|x86.ActiveCfg = Release|Win32
+		{364EB00E-6DCB-4614-A13F-C67DEAB60C22}.Release|x86.Build.0 = Release|Win32
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Debug|x64.ActiveCfg = Debug|x64
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Debug|x64.Build.0 = Debug|x64
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Debug|x86.ActiveCfg = Debug|Win32
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Debug|x86.Build.0 = Debug|Win32
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Release|x64.ActiveCfg = Release|x64
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Release|x64.Build.0 = Release|x64
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Release|x86.ActiveCfg = Release|Win32
+		{737EC6B3-854D-4651-B78D-F9B36AB4D9DF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

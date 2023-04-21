@@ -2,7 +2,7 @@
 
 
 #include <string>
-#include <iomanip>
+#include <iostream>
 using namespace std;
 
 int main(){
@@ -13,5 +13,4 @@ int main(){
  string s4 = s1 + s2 + s3;
 
  cout << s4;
-
 }
