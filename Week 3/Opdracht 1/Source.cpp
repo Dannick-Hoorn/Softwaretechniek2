@@ -92,6 +92,7 @@ public:
         std::ostringstream os;
         os << team1.printnaam() << " speelde tegen " << team2.printnaam() << " op " << wedDat.to_string() << ", de uitslag is " << uitslag << '\n';
         return os.str();
+
     }
 };
 
