@@ -124,6 +124,4 @@ void Ruit::teken() const {
         // Voeg aan het eind een symbool en een spatie toe
         regel.erase(regel.length() - 2, 2);
     }
-    
-    
 }
