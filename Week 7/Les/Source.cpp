@@ -118,8 +118,6 @@ protected:
 	string kleur;
 public:
 	GrafischObject(Punt m, string k) : middelpunt(m), kleur(k) {
-		m = middelpunt;
-		k = kleur;
 	}
 
 	void zetMiddelpunt(Punt p) {
