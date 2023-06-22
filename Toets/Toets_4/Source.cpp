@@ -6,124 +6,111 @@ using namespace std;
 
 class Fruit {
 protected:
-	double mGewicht;
-	string mSoort;
+    double mGewicht;
+    string mSoort;
+
 public:
-	virtual string to_string() const = 0;
+    virtual string to_string() const = 0;
 };
 
 class Appels : public Fruit {
 public:
-	Appels(double gewicht, string soort) {
-		mGewicht = gewicht;
-		mSoort = soort;
-	}
+    Appels(double gewicht, string soort) {
+        mGewicht = gewicht;
+        mSoort = soort;
+    }
 
-	string to_string() const override {
-		ostringstream os;
-		os << "Soort: " << mSoort << "	Gewicht: " << mGewicht << endl;
-		return os.str();
-	}
+    string to_string() const override {
+        ostringstream os;
+        os << "Soort: " << mSoort << "\tGewicht: " << mGewicht << endl;
+        return os.str();
+    }
 };
 
 class AppelBoom {
 protected:
-	int mTakken, mWortels, mBladeren;
-	vector<Appels> mAppel;
+    int mTakken, mWortels, mBladeren;
+    vector<Appels> mAppel;
+
 public:
-	AppelBoom() {
-		mTakken = 0;
-		mWortels = 0;
-		mBladeren = 0;
-	}
-	AppelBoom(int takken, int wortels, int bladeren) {
-		mTakken = takken;
-		mWortels = wortels;
-		mBladeren = bladeren;
-	}
+    AppelBoom() {
+        mTakken = 0;
+        mWortels = 0;
+        mBladeren = 0;
+    }
 
-	void groei(int aantal) {
-		mTakken += aantal;
-		mWortels += aantal;
-	}
+    AppelBoom(int takken, int wortels, int bladeren) {
+        mTakken = takken;
+        mWortels = wortels;
+        mBladeren = bladeren;
+    }
 
-	void bladGroei() {
-		mBladeren += (mTakken * 100);
-	}
+    void groei(int aantal) {
+        mTakken += aantal;
+        mWortels += aantal;
+    }
 
-	void snoei(int aantal) {
-		mTakken -= aantal;
-		mBladeren -= (aantal * 100);
-	}
+    void bladGroei() {
+        mBladeren += (mTakken * 100);
+    }
 
-	int getTakken() {
-		return mTakken;
-	}
+    void snoei(int aantal) {
+        mTakken -= aantal;
+        mBladeren -= (aantal * 100);
+    }
 
-	void addFruit(Appels a) {
-		mAppel.push_back(a);
-	}
+    int getTakken() {
+        return mTakken;
+    }
 
-	void printFruit() {
-		for (int i = 0; i != mAppel.size(); i++) {
-			cout << mAppel[i].to_string() << endl;
-		}
-	}
+    void addFruit(Appels a) {
+        mAppel.push_back(a);
+    }
 
-	std::string toString() const {
-		std::ostringstream os;
-		os << "takken: " << mTakken << endl;
-		os << "wortels: " << mWortels << endl;
-		os << "bladeren: " << mBladeren << endl;
-		return os.str();
-	}
+    void printFruit() {
+        for (int i = 0; i != mAppel.size(); i++) {
+            cout << mAppel[i].to_string() << endl;
+        }
+    }
+
+    std::string toString() const {
+        std::ostringstream os;
+        os << "takken: " << mTakken << endl;
+        os << "wortels: " << mWortels << endl;
+        os << "bladeren: " << mBladeren << endl;
+        return os.str();
+    }
 };
 
 class Bos {
 protected:
-	vector<AppelBoom*> mBomen;
+    vector<AppelBoom*> mBomen;
+
 public:
-	void addBomen(AppelBoom* b) {
-		mBomen.push_back(b);
-	}
-	void printBos() {
-		cout << mBomen.size() << endl;
-	}
-	int getTakkenBos() {
-		int takkenTotaal = 0;
-		for (int i = 0; i != mBomen.size(); i++) {
-			takkenTotaal += mBomen[i]->getTakken();
-		}
-		return takkenTotaal;
-	}
+    void addBomen(AppelBoom* b) {
+        mBomen.push_back(b);
+    }
+
+    void printBos() {
+        cout << mBomen.size() << endl;
+    }
+
+    int getTakkenBos() {
+        int takkenTotaal = 0;
+        for (int i = 0; i != mBomen.size(); i++) {
+            takkenTotaal += mBomen[i]->getTakken();
+        }
+        return takkenTotaal;
+    }
 };
-
-class Fruit {
-protected:
-	double mGewicht;
-	string mSoort;
-public:
-	virtual string to_string() const = 0;
-};
-
-class Appels : public Fruit {
-public:
-	Appels(double gewicht, string soort) {
-		mGewicht = gewicht;
-		mSoort = soort;
-	}
-
-	string to_string() const override {
-		ostringstream os;
-		os << "Soort: " << mSoort << "	Gewicht: " << mGewicht << endl;
-		return os.str();
-	}
-};
-
 
 int main() {
-	AppelBoom b1(10, 10, 100);
-	Appels a1(0.155, "Grany Smith");
+    AppelBoom b1(10, 10, 100);
+    Appels a1(0.155, "Granny Smith");
+    Appels a2(0.163, "Pink Lady");
 
-	b1.addFruit(a1);
+    b1.addFruit(a1);
+    b1.addFruit(a2);
+
+    b1.printFruit();
 }
