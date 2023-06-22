@@ -8,7 +8,6 @@ class Fruit {
 protected:
     double mGewicht;
     string mSoort;
-
 public:
     virtual string to_string() const = 0;
 };
@@ -22,7 +21,7 @@ public:
 
     string to_string() const override {
         ostringstream os;
-        os << "Soort: " << mSoort << "\tGewicht: " << mGewicht << endl;
+		os << "Soort: " << mSoort << "	Gewicht: " << mGewicht << endl;
         return os.str();
     }
 };
@@ -31,14 +30,12 @@ class AppelBoom {
 protected:
     int mTakken, mWortels, mBladeren;
     vector<Appels> mAppel;
-
 public:
     AppelBoom() {
         mTakken = 0;
         mWortels = 0;
         mBladeren = 0;
     }
-
     AppelBoom(int takken, int wortels, int bladeren) {
         mTakken = takken;
         mWortels = wortels;
@@ -85,16 +82,13 @@ public:
 class Bos {
 protected:
     vector<AppelBoom*> mBomen;
-
 public:
     void addBomen(AppelBoom* b) {
         mBomen.push_back(b);
     }
-
     void printBos() {
         cout << mBomen.size() << endl;
     }
-
     int getTakkenBos() {
         int takkenTotaal = 0;
         for (int i = 0; i != mBomen.size(); i++) {
